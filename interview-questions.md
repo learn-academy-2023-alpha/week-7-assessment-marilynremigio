@@ -19,7 +19,8 @@ On a line under the def change line, type "add_column :students, :cohort_id, :in
 To implement it, type "rails db:migrate" in your terminal and look at the schema file to see the new column added to the Student model.
 
 
-Researched answer:
+Researched answer: A foreign key is necessary to add an association relationship between models in a database. The model with the foreign key is the belongs_to model, which in this case is the Student model. The primary key of the has_many model, Cohort will be the number for foreign key called cohort_id. To add it we'll need to create a migration file by using 'rails generate migration add_cohort_id_to_student'. You will then see a new migration file created under db>migrate in your code editor. Within the def change method, use method add_cohort_id that takes in 3 arguments: the model name it's being added to, the column name to hold the foreign key, and the data type. Lastly, use the commmand rails db:migrate to implement it.
+
 
 2. Which RESTful routes must always be passed params? Why?
 
